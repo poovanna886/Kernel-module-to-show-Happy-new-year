@@ -66,7 +66,7 @@ static int __init kmodule_init(void) {
 
 
 
-static void __exit rickroll_exit(void) {
+static void __exit kmodule_exit(void) {
 
     unregister_chrdev(major, DEVICE_NAME);
 
