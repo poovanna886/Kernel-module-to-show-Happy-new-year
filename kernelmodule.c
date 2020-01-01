@@ -42,7 +42,7 @@ static int major;
 
 
 
-static int __init rickroll_init(void) {
+static int __init kmodule_init(void) {
 
     major = register_chrdev(0, DEVICE_NAME, &fops);
 
@@ -130,6 +130,6 @@ static ssize_t dev_read(struct file *filep, char *buffer, size_t len, loff_t *of
 
 
 
-module_init(rickroll_init);
+module_init(kmodule_init);
 
-module_exit(rickroll_exit);
+module_exit(kmodule_exit);
